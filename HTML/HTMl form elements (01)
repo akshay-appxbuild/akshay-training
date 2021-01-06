@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Form Elements</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form action="/www.w3school.com">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="Lamborgini">Lamborgini</option>
+    <option value="TaTa Nono">TaTa Nano</option>
+    <option value="Bugati">Bugati</option>
+  </select>
+  <input type="submit">
+</form>
+</body>
+</html>

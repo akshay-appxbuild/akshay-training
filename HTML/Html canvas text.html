@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html canvas Text
+    </title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width: 100 height: 200; style="border: 1px solid #b3b3b3;">
+        It seems like your browser doesn't support canvas
+    </canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.font = "20px Italic";
+        ctx.fillStyle = "red";
+        ctx.textAlign = "center";
+        ctx.fillText("HEY AKSHAY", canvas.width / 2, canvas.height / 2);
+        ctx.strokeText("Hey Thakare", 85, 30);
+    </script>
+</body>
+
+</html>

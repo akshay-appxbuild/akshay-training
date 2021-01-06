@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html Drag and drop API
+    </title>
+    <style>
+        #div1 {
+            width: 200;
+            height: 400;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTranfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTranfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <p>this is a draggeble element</p>
+    <div id="div1" ondrag="drag(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" src="/home/akshay/Pictures/practice images/w3school.jpeg" draggable="true" ondragstart="drag(event)" width="200" height="200"></div>
+</body>
+
+</html>

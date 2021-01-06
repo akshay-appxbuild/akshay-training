@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html geolocation API
+    </title>
+</head>
+
+<body>
+    <p>click on the try it button to get a location coordianate</p>
+    <button onclick="getLocation()">Try It</button>
+    <p id="loc"></p>
+    <script>
+        var x = document.getElementById("loc");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPositiom, showError);
+            } else {
+                x.innerHTML = "geolocation is not supported";
+            }
+        }
+
+        function showPositiom(akshay) {
+            x.innerHTML = "latitude:-" + akshay.coords.latitude + "<br> Longitude:-" + akshay.coords.longitude;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "user denies the permission for the location"
+                    break;
+                case error.POSSITION_INVALID:
+                    x.innerHTML = "your position is invalid"
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

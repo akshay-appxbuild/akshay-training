@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html web worker
+    </title>
+</head>
+
+<body>
+    <p> Count this number:- <output id="worker"></output></p>
+    <button onclick="startWorker" type="button">Start Workera</button>
+    <button onclick="stopWorker" type="button">Stop Worker</button>
+    <script>
+        var w;
+
+        function startWorker() {
+            if (typeOf(Worker) !== "undefined") {
+                if (typeof(w) == "undefined") {
+                    w = newWorker("/home/akshay/Documents/Data folder/HTML/javascript.js");
+                }
+                w.onmessage = function(event) {
+                    document.getElementById("worker").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("worker").innerHTML = "No web worker supported by this browser.";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
+
+</html>

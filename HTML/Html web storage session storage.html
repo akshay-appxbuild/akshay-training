@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html web storage session storage API
+    </title>
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickCount) {
+                    sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
+                } else {
+                    sessionStorage.clickCount = 1;
+                }
+                document.getElementById("web").innerHTML = "you have clicked the button" + sessionStorage.clickCount + "time";
+            } else {
+                document.getElementById("web").innerHTML = "sry the browser did't support";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <p id="web"></p>
+    <button onclick="clickCounter()" type="button">Try it</button>
+</body>
+
+</html>

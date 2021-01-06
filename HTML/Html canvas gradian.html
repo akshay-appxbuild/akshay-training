@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html canvas Gradian
+    </title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width: 100 height: 200; style="border: 1px solid #b3b3b3;">
+        It seems like your browser doesn't support canvas
+    </canvas>
+    <!--using  createLinearGradient()-->
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        //Create a gradient
+        var grd = ctx.createLinearGradient(0, 0, 100, 0);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "yellow");
+        //fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 60, 100, 110);
+    </script>
+    <!--using createRadialGradient()-->
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        //Create a gradient
+        var grd = ctx.createRadialGradient(110, 60, 100, 40, 30, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "green");
+        //fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 60, 100, 110);
+    </script>
+</body>

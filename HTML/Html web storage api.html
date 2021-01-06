@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html web storage API localStorage
+    </title>
+</head>
+
+<body>
+    <div id="web"></div>
+    <script>
+        if (typeof(Storage) !== "Undefined") {
+            localStorage.setItem("lastName", "thakare");
+            document.getElementById("web").innerHTML = localStorage.getItem("lastName");
+        } else {
+            document.getElementById("web").innerHTML = "This browser did not support this storage"
+        }
+    </script>
+</body>
+
+</html>
