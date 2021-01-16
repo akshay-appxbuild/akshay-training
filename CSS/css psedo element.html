@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Css psedo element
+    </title>
+</head>
+<style>
+    p::first-letter {
+        color: tomato;
+        font-size: xx-large;
+    }
+    
+    p::first-line {
+        color: yellowgreen;
+    }
+    
+    p::before {
+        content: url("/home/akshay/Pictures/practice images/git.png");
+    }
+    
+    p::after {
+        content: url("/home/akshay/Pictures/practice images/git.png")
+    }
+</style>
+
+<body>
+    <p> this is a long paragraph which is related to the psedo element so on this paragraph the first line will be get colored and the first letter will get colored and its size we be greater than other this is a long paragraph which is related to the psedo
+        element so on this paragraph the first line will be get colored and the first letter will get colored and its size we be greater than other
+    </p>
+</body>
+
+</html>

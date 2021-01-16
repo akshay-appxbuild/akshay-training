@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css grid rows, column, position
+    </title>
+    <style>
+        .container {
+            background: rgb(202, 193, 193);
+            width: 80%;
+            height: 40%;
+            margin: 90px 0 0 50px;
+            display: grid;
+            grid-template-columns: repeat(3, [col-start]120px [col-end]);
+            /*grid-template-rows: repeat(4, 120px);*/
+            /*repeat help to add a same column within  the area */
+            grid-template-rows: [first-start]100px [first-end second-start]100px [second-end five-start]100px [five-end six-start]100px [six-end];
+            grid-gap: 20px;
+            grid-column-gap: 10px;
+        }
+        
+        .item1 {
+            background: rgb(236, 60, 60);
+            grid-row: first-start / first-end;
+            grid-column: col-start 1/ col-end 3;
+            /*span help to mearge the number of column like 3 column we had taken*/
+        }
+        
+        .item2 {
+            background: blue;
+        }
+        
+        .item3 {
+            background: hotpink;
+            grid-row: second-start/second-end;
+            grid-column: col-start 2/col-start 2;
+        }
+        
+        .item4 {
+            background: lightblue;
+            grid-row: second-start/five-end;
+            grid-column: col-start 3/ col-end 3;
+        }
+        
+        .item5 {
+            background: lightseagreen;
+            grid-row: five-start/five-end;
+            grid-column: col-start 1/ col-end 2;
+        }
+        
+        .item6 {
+            background: lightskyblue;
+            grid-row: six-start/six-end;
+            grid-column: col-start 1/ span col-end 3
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Grid rows and column </h1>
+    <div class="container">
+        <div class="item1"> first </div>
+        <div class="item2">Second</div>
+        <div class="item3">three</div>
+        <div class="item4">four</div>
+        <div class="item5">five</div>
+        <div class="item6">six</div>
+    </div>
+</body>
+
+</html>

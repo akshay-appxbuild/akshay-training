@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css multiple background
+    </title>
+    <style>
+        #one {
+            background-image: url("/home/akshay/Pictures/practice images/git.png"), url("/home/akshay/Pictures/practice images/border1.gif");
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 20px;
+            border-image: url("/home/akshay/Pictures/practice images/border.png"), 30 stretch, repeat;
+            border: 20px solid transparent;
+        }
+        
+        #two {
+            background: url("/home/akshay/Pictures/practice images/git.png");
+            background-size: 130px 120px;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-color: thistle;
+            border: 10px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one">
+        <h1>Lorem Ipsum Dolor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="two">
+        <h1>Lorem Ipsum Dolor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </div>
+</body>
+
+</html>

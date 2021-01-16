@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css combinator
+    </title>
+    <style>
+        div p {
+            background-color: red;
+            color: turquoise;
+        }
+        
+        div>p {
+            color: rgb(9, 255, 0);
+        }
+        
+        div+p {
+            text-align: center;
+        }
+        
+        div~p {
+            background-color: rgb(34, 209, 221);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p> first paragraph</p>
+        <p> second paragraph</p>
+        <p> this is a <span> span paragraph</span>third paragraph</p>
+    </div>
+    <p> fourth paragraph</p>
+    <section>this is a section </section>
+    <p>this is a last paragraph</p>
+</body>
+
+</html>

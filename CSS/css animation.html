@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css transition
+    </title>
+    <style>
+        .one {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            background: rgb(155, 150, 150);
+            margin: -150px;
+            line-height: 300px;
+            /*
+            animation-name: akshay;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;*/
+            animation: akshay 2s ease-in infinite alternate;
+        }
+        
+        @keyframes akshay {
+            0% {
+                border-radius: 0%;
+                text-align: center;
+                color: white;
+            }
+            50% {
+                background-color: violet;
+            }
+            100% {
+                border-radius: 50%;
+                background-color: tomato;
+                color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"> Akshay Thakare</div>
+</body>
+
+</html>

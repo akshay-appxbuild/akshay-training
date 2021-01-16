@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css image gallary
+    </title>
+    <style>
+        div.gallary {
+            border: 1px solid #ccc;
+            width: 408px;
+            float: left;
+            margin: 5px;
+        }
+        
+        div.two {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        div.gallary:hover {
+            border: 1px solid red;
+        }
+        
+        div.gallary img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="responsive">
+
+        <div class="gallary">
+            <a href="/home/akshay/Pictures/nice.jpg" target="_blank">
+                <img src="/home/akshay/Pictures/nice.jpg" alt="nature" width="600" height="400">
+            </a>
+            <div class="two"> this a a image of the nature</div>
+        </div>
+    </div>
+    <div class="responsive">
+
+        <div class="gallary">
+            <a href="home/akshay/Pictures/191346.jpg" target="_blank">
+                <img src="/home/akshay/Pictures/191346.jpg" alt="nature2" width="600" height="400">
+            </a>
+            <div class="two"> this a a image of the nature 2</div>
+        </div>
+    </div>
+    <div class="responsive">
+
+        <div class="gallary">
+            <a href="/home/akshay/Pictures/191341.jpg" target="_blank">
+                <img src="/home/akshay/Pictures/191341.jpg" alt="nature3" width="600" height="400">
+            </a>
+            <div class="two"> this a a image of the nature 3</div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

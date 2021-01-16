@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css grid rows, column, position
+    </title>
+    <style>
+        .container {
+            background: rgb(202, 193, 193);
+            width: 80%;
+            height: 40%;
+            margin: 90px 0 0 50px;
+            display: grid;
+            align-content: space-between;
+            grid-template-columns: 10% 200px auto;
+            grid-template-rows: 150px 100px 100px;
+            /*auto help to fill the remaining size of the container*/
+            grid-gap: 20px;
+            grid-column-gap: 10px;
+        }
+        
+        .item1 {
+            background: rgb(236, 60, 60);
+            grid-row-start: 2;
+            /*this is used to change the position of the item*/
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        
+        .item2 {
+            background: blue;
+            grid-area: 2/1/3/2;
+            /*this is a shorthand of the item position row start / column start / row end / column end */
+        }
+        
+        .item3 {
+            background: hotpink;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column: 2/3;
+            /*this is a shorthand for the position 2 is start and 3 is end*/
+        }
+        
+        .item4 {
+            background: lightblue;
+        }
+        
+        .item5 {
+            background: lightseagreen;
+        }
+        
+        .item6 {
+            background: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Grid rows and column </h1>
+    <div class="container">
+        <div class="item1"> first </div>
+        <div class="item2">Second</div>
+        <div class="item3">three</div>
+        <div class="item4">four</div>
+        <div class="item5">five</div>
+        <div class="item6">six</div>
+    </div>
+</body>
+
+</html>

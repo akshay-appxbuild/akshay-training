@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Css Styling Image 2
+    </title>
+    <style>
+        /*div.main:hover .one {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            width: 50%;
+            opacity: 0;
+            transition: .5s ease;
+        }*/
+        
+        img:hover {
+            transform: scaleX(-1);
+        }
+        
+        body {
+            margin: 25px;
+        }
+        
+        img {
+            opacity: 0.7;
+            filter: grayscale(50%);
+            filter: invert(40);
+        }
+        
+        div.one {
+            width: 50%;
+            background-color: rgb(129, 42, 42);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+        }
+        
+        div.two {
+            text-align: center;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="one">
+            <img src="/home/akshay/Pictures/practice images/nice.jpg" alt="nature" style="width:100%">
+            <div class="two">
+                <p>Nature</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

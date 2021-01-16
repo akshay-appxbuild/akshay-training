@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Css button </title>
+    <style>
+        .main {
+            float: left;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        .two {
+            background-color: salmon;
+            font-size: 25px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            width: 150px;
+            box-shadow: 0 2px 0 blue;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 5s;
+        }
+        
+        .two:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+        
+        .two:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+        
+        .three {
+            cursor: none;
+            background-color: lightsteelblue;
+            opacity: 0.3;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button class="one"> one </button>
+        <button class="two"> one </button>
+
+        <button class="three"> one </button>
+
+        <button class="four"> one </button>
+
+        <button class="five"> one </button>
+
+        <button class="six"> one </button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Css Tooltip</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted rgb(146, 190, 88);
+        }
+        
+        .tooltip .tool {
+            visibility: hidden;
+            width: 120px;
+            background-color: rgb(199, 102, 102);
+            color: #fff;
+            text-align: center;
+            z-index: -1;
+            padding: 5px;
+            position: absolute;
+            top: -5px;
+            left: 105%;
+        }
+        
+        .tooltip:hover .tool {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body style="text-align:center;">
+
+    <h2> This is a Right Tooltip</h2>
+
+    <div class="tooltip">Hover over me
+        <span class="tool">Akshay Thakare </span>
+    </div>
+
+</body>
+
+</html>

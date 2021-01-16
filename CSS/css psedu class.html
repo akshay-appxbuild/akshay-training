@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css psedo class
+    </title>
+</head>
+<style>
+    a.link:link {
+        background-color: turquoise;
+    }
+    
+    a.link:visited {
+        color: tomato;
+    }
+    
+    a.link:hover {
+        color: teal;
+    }
+    
+    a.link:active {
+        color: yellow;
+    }
+    
+    p:second {
+        display: none;
+        background-color: wheat;
+        padding: 30px;
+    }
+    
+    div:hover p#second {
+        display: block;
+    }
+    
+    #third p:first-child {
+        color: blue;
+    }
+</style>
+
+<body>
+    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" class="link" target="_blank">  first paragraph </a><br>
+    <div>this is a which paragrapgh to see plzz hover the mouse over it
+        <p id="second"> second paragraph</p>
+    </div>
+    <div id="third">
+        <p> this is a third paragraph </p>
+        <p> this is a fourth paragraph </p>
+    </div>
+</body>
+
+</html>

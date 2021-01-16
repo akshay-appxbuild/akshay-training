@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css Dropdown
+    </title>
+    <style>
+        div.one {
+            position: relative;
+            display: inline-block;
+        }
+        
+        div.two {
+            position: absolute;
+            display: none;
+            padding: 12px 20px;
+            box-shadow: 0px 12px 10px 14px rgb(0, 0, 0, 0.2);
+            background-color: rosybrown;
+        }
+        
+        div.one:hover .two {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> this is a css Dropdown</h1>
+    <div class="one">
+        <span> hover mouse here </span>
+        <div class="two">
+            <p>Akshay Thakare</p>
+        </div>
+    </div>
+</body>
+
+</html>

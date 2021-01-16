@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Css Outline
+    </title>
+    <style>
+        h1 {
+            color: red;
+            text-emphasis: center;
+            background-color: palegoldenrod;
+        }
+        
+        p.dotted {
+            outline-style: dotted;
+            outline-width: 10px;
+            outline-color: rgb(1, 111, 255);
+            outline-offset: 15px;
+            /*add space in between the border and the outline*/
+        }
+        
+        p.inset {
+            outline: inset 7px rgb(115, 255, 0);
+            /*this is a shorthand techniqe*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1> This is the css outline which has different attributes</h1><br>
+    <p class="dotted"> this is the dotted outline for this text </p><br>
+    <p class="inset"> this is a inset outline for this text </p>
+</body>
+
+</html>

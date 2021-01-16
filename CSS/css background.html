@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Css Background (this is just a sample which contain all the background tag for reveiw purpose)
+    </title>
+    <style>
+        body {
+            background-image: url("/home/akshay/Pictures/nice.jpg");
+            background-repeat: repeat-x;
+            /*will repeat the image in x coordinate*/
+        }
+        
+        #div1 {
+            background-image: url("/home/akshay/Pictures/practice images/w3school.jpeg");
+            background-repeat: no-repeat;
+            /*no repetition will occur*/
+            background-position: right top;
+            margin-right: 200px;
+            background-attachment: fixed;
+            /*background image will be fixed in its position even when we scroll the page*/
+            background-attachment: scroll;
+            /*will scroll the image when we scroll the page*/
+            background-color: tomato;
+            background: #ffffff url("img_tree.png") no-repeat right top;
+            /*we can shorten this code like this which include color, url, repeat, and position*/
+            opacity: 0.3;
+        }
+        
+        #div2 {
+            background-color: rgba(24, 88, 226, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">this is a program for css background to check its opacity</div>
+    <div id="div2">this is akshay thakare form chandrapur </div>
+</body>
+
+</html>

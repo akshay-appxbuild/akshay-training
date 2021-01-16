@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css transition
+    </title>
+    <style>
+        #one {
+            width: 100px;
+            height: 150px;
+            background: lightcoral;
+            /*transition-property: width, height;
+            transition-duration: 1s, 2s;*/
+            /*transition: width 1s, height 2s;*/
+            transition: all 1s;
+            transition-timing-function: steps(4);
+            /*transition-timing-function: easy-out;*/
+            transition-delay: 2s;
+        }
+        
+        #one:hover {
+            width: 200px;
+            height: 100px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> this is a css transition</h1>
+    <div id="one"> </div>
+</body>
+
+</html>

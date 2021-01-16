@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>
+        css variable
+    </title>
+    <style>
+         :root {
+            --red: #ff0011;
+            /* this is a global variable  which is declared in root*/
+            --blue: #0d00ff;
+            --white: #ddd;
+        }
+        
+        .container {
+            --font-size: 20px;
+        }
+        
+        body {
+            background-color: rosybrown;
+        }
+        
+        .container {
+            background-color: var(--white);
+            font-size: var(--font-size);
+            padding: 20px;
+            color: var(--red);
+        }
+        
+        @media screen and (min-width: 300px) {
+            .container {
+                --font-size: 50px;
+            }
+        }
+        
+        h1 {
+            background-color: var(--red);
+            color: var(--blue);
+        }
+        
+        p {
+            --blue: #00f2ff;
+            /* this is a local variable whose value we have change*/
+            background-color: var(--blue);
+            color: var(--red);
+            font-size: 50px;
+            --button-blue: #3a8d91;
+            /* this is a new variable which we can declare for a specific element*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1> this is a heading</h1>
+    <p> this is a paragraph which is coloured using the variable
+        <button> this is a button </button>
+    </p>
+    <div class="container">
+        <h2>Lorem Ipsum</h2>
+        <p>When the browser's width is less than 300px, the font-size of this div is 20px. When it is 30px or wider, set the --fontsize variable value to 50px. Resize the browser window to see the effect.</p>
+    </div>
+</body>
+
+</html>

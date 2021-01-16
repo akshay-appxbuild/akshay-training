@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css grid rows, column, position
+    </title>
+    <style>
+        .container {
+            background: rgb(202, 193, 193);
+            width: 80%;
+            height: 40%;
+            margin: 90px 0 0 50px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-template-areas: ". first ." "second three four" "five five four" "six six six";
+            grid-gap: 20px;
+            grid-column-gap: 10px;
+        }
+        
+        .item1 {
+            background: rgb(236, 60, 60);
+            grid-area: first;
+        }
+        
+        .item2 {
+            background: blue;
+            grid-area: second;
+        }
+        
+        .item3 {
+            background: hotpink;
+            grid-area: three;
+        }
+        
+        .item4 {
+            background: lightblue;
+            grid-area: four;
+        }
+        
+        .item5 {
+            background: lightseagreen;
+            grid-area: five;
+        }
+        
+        .item6 {
+            background: lightskyblue;
+            grid-area: six;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Grid rows and column </h1>
+    <div class="container">
+        <div class="item1"> first </div>
+        <div class="item2">Second</div>
+        <div class="item3">three</div>
+        <div class="item4">four</div>
+        <div class="item5">five</div>
+        <div class="item6">six</div>
+    </div>
+</body>
+
+</html>

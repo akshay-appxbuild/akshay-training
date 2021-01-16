@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>
+        css user interface
+    </title>
+    <style>
+        .verti {
+            width: 30%;
+            height: 50%;
+            border: 2px solid black;
+            background-color: lightblue;
+            resize: vertical;
+            overflow: auto;
+            outline: 3px dashed red;
+            /*gives an outline outside the border*/
+            outline-offset: 5px;
+            /*Adds space between an outline and the border of an element*/
+        }
+        
+        .hori {
+            width: 30%;
+            height: 30%;
+            border: 2px solid black;
+            background-color: lightcyan;
+            resize: horizontal;
+            overflow: auto;
+        }
+        
+        .both {
+            width: 30%;
+            height: 40%;
+            border: 2px solid black;
+            background-color: lightpink;
+            resize: both;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="verti">
+        <p> this is a type user interface topic but this is vertically resizable </p>
+    </div><br>
+    <div class="hori">
+        <p> this is a type user interface topic but this is horizontally resizable </p>
+    </div><br>
+    <div class="both">
+        <p> this is a type user interface topic but this is both vertically and horizintaly resizable </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        css text- effect
+    </title>
+    <style>
+        p.one {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        
+        p.two {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        p.two:hover {
+            overflow: visible;
+        }
+        
+        p.first {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="first">Some text with default writing-mode.</p>
+
+    <p>Some text with a span element with a <span class="first">vertical-rl</span> writing-mode.</p>
+
+    <h2>text-overflow: clip:</h2>
+    <p class="one">this is a very long sentence for the box we will see the exact result</p>
+
+    <h2>text-overflow: ellipsis:</h2>
+    <p class="two">this is a very long sentence for the box we will see the exact result</p>
+
+</body>
+
+</html>

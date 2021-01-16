@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>
+        css pagination
+    </title>
+    <style>
+        .main {
+            display: inline-block;
+        }
+        
+        .main a {
+            text-align: center;
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            float: left;
+            border-radius: 10px;
+            transition: 2s;
+            border: 2px solid green;
+        }
+        
+        .main a.active {
+            background-color: tomato;
+            color: thistle;
+        }
+        
+        .main a:hover:not(.active) {
+            background-color: teal;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+    </div>
+</body>
+
+</html>

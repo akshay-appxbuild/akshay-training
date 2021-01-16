@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> css links </title>
+    <style>
+        a.second {
+            padding: 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        a.first:link {
+            background-color: rgb(51, 199, 46);
+            color: blue;
+        }
+        
+        a.first:visited {
+            background-color: coral;
+            color: yellow;
+        }
+        
+        a.first:hover {
+            background-color: indianred;
+            color: red;
+        }
+        
+        a.first:active {
+            background-color: saddlebrown;
+            color: orange;
+        }
+        
+        a.second:link,
+         :visited {
+            background-color: rgb(0, 17, 255);
+            color: tomato;
+        }
+        
+        a.second:hover,
+         :active {
+            background-color: rgb(113, 251, 0);
+            color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> this is a css link tag which help to animate links </h1><br>
+    <p> <a class="first" href="https://www.w3schools.com/css/css_link.asp" target="_self"> CLICK HERE </a></p><br>
+    <p> <a class="second" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_link_advanced" target="_self"> This is second link </a></p><br>
+    <span style="cursor: s-resize;"> In this we will see different types of cursor to see it plzz hover mouse on this sentence </span>
+</body>
+
+</html>

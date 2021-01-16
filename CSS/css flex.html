@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: rgb(93, 255, 29);
+            flex-direction: row;
+            width: 1000px;
+            /*height: 700px;
+            flex-wrap: wrap-reverse;*/
+            /* when the width of the container is too small with respect to the list then flex wrap is used*/
+            /*justify-content: space-between;
+            align-items: stretch;*/
+        }
+        
+        .flex-container>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+        
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-container">
+        <div style="align-self: flex-end">one</div>
+        <div>two</div>
+        <div style="align-self: center">three</div>
+        <div>four</div>
+        <div style="align-self: flex-start">five</div>
+    </div>
+
+</body>
+
+</html>

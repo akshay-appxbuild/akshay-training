@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        css attr selector
+    </title>
+    <style>
+        a[target] {
+            color: red;
+        }
+        
+        a[target=_top] {
+            font-size: 40px;
+        }
+        
+        [title~="beautful"] {
+            border: solid tan;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="/home/akshay/Pictures/nice.jpg" target="_blank">
+            this a a image of the nature
+        </a>
+        <img src="/home/akshay/Pictures/191341.jpg" title="beautiful" alt="nature3" width="600" height="400">
+    </div>
+    <div>
+        <a href="home/akshay/Pictures/191346.jpg" target="_top">
+        this a a image of the nature 2
+        </a>
+    </div>
+    <img src="/home/akshay/Pictures/191341.jpg" title="beautiful nature" alt="nature3" width="600" height="400">
+
+    <div>
+        <a href="/home/akshay/Pictures/191341.jpg" target="_parent">
+        this a a image of the nature 3
+        </a>
+    </div>
+</body>
+
+</html>
