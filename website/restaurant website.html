@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">"
+    <!--title of a web page-->
+    <title>
+        Responsive website
+    </title>
+    <style>
+        /*Declaration of main content*/
+        
+         :root {
+            /*Declation of global variable*/
+            --yellow: #ffc600;
+            --black: #272727;
+        }
+        
+        *,
+         ::before,
+         ::after {
+            box-sizing: inherit;
+        }
+        
+        html {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 900;
+            font-size: 20px;
+            color: var(--black);
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+        }
+        
+        body {
+            background-image: url("./images/topography.svg"), linear-gradient(110deg, #f93d66, #6d47d9);
+            background-size: 125em auto;
+            margin: 40px;
+            font-size: 15px;
+            background-attachment: fixed;
+            letter-spacing: -1px;
+        }
+        
+        h1,
+        h3,
+        h2 {
+            margin: 0 0 5px 0;
+        }
+        
+        .main {
+            /*Arranging all the element of the page in a grid*/
+            display: grid;
+            grid-gap: 15px;
+        }
+        
+        [aria-controls="nav-list"] {
+            display: none;
+        }
+        /*Navigation Bar*/
+        
+        .nav ul {
+            display: grid;
+            grid-gap: 10px;
+            padding: 0;
+            list-style: none;
+            grid-template-columns: auto auto auto auto auto;
+        }
+        
+        .nav a {
+            background: var(--yellow);
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+            color: var(--black);
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        /*Header section*/
+        
+        .top-header {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-areas: "top top block" "top top block";
+        }
+        
+        .top {
+            grid-area: top;
+            background-image: url("./images/taco.jpeg");
+            background-size: cover;
+            background-position: bottom right;
+            min-height: 400px;
+            display: flex;
+            padding: 50px;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .top>* {
+            background: var(--yellow);
+            padding: 5px;
+        }
+        
+        .block {
+            background: var(--yellow);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .price {
+            font-size: 50px;
+            font-weight: 300;
+        }
+        
+        .block p {
+            margin: 0;
+            text-align: center;
+        }
+        /*FEATURES Horizontal list*/
+        
+        .sec-1 {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: auto auto auto auto;
+        }
+        
+        .sub-sec-1 {
+            background: white;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid white;
+        }
+        
+        .sub-sec-1 .icon {
+            font-size: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .sec-1 p {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        /*About Featured Taco */
+        
+        .about-taco {
+            background: white;
+            padding: 50px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 400px 1fr;
+        }
+        
+        button {
+            background: var(--yellow);
+            border: 0;
+            padding: 10px 20px;
+        }
+        /* Instant Grams*/
+        
+        .gallary {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: auto auto auto auto auto auto;
+        }
+        
+        .gallary h2 {
+            display: grid;
+            grid-gap: 20px;
+            text-align: center;
+            grid-template-columns: 1fr auto 1fr;
+            grid-column: 1 / -1;
+        }
+        
+        .gallary h2::before {
+            background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
+            height: 10px;
+            content: '';
+            display: block;
+        }
+        
+        .gallary h2::after {
+            background: linear-gradient(to var(--direction, right), var(--yellow), transparent);
+            height: 10px;
+            content: '';
+            display: block;
+        }
+        
+        img {
+            width: 100%;
+        }
+        /*Mobile and Tablet View*/
+        
+        @media (max-width: 1000px) {
+            .top-header {
+                grid-template-areas: "top top" "block block";
+            }
+            /*Navigation Button*/
+            [aria-controls="nav-list"] {
+                display: block;
+            }
+            [aria-expanded="false"] .close {
+                display: none;
+            }
+            [aria-expanded="true"] .close {
+                display: inline-block;
+            }
+            [aria-expanded="true"] .open {
+                display: none;
+            }
+            .about-taco {
+                grid-template-columns: 1fr 1fr;
+            }
+            .sec-1 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallary {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .top-header {
+                grid-template-areas: "top" "block" "block";
+            }
+            [aria-controls="nav-list"] {
+                display: block;
+            }
+            .about-taco {
+                grid-template-columns: 1fr;
+            }
+            .sec-1 {
+                grid-template-columns: 1fr;
+            }
+            .gallary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <!--Navigation Bar-->
+        <nav class="nav">
+            <button aria-expanded="false" aria-controls="nav-list">
+                <span class="close">×</span>
+                <span class="open">☰</span>
+                Menu
+            </button>
+            <ul id="nav-list">
+                <li><a href="">TACOS</a></li>
+                <li> <a href="">BEERS</a></li>
+                <li> <a href="">WINES</a></li>
+                <li><a href="">DESSERTS</a></li>
+                <li><a href="">RESERVATIONS</a></li>
+            </ul>
+        </nav>
+
+        <!--Header section-->
+        <div class="top-header">
+            <header class="top">
+                <h1>Terry's Taco Joint</h1>
+                <p>Pretty Good Tacos!</p>
+            </header>
+            <div class="block">
+                <p class="price">$1.99</p>
+                <p>Tacos</p>
+            </div>
+            <div class="block">
+                <p class="price">$3.99</p>
+                <p>Kombucha</p>
+            </div>
+        </div>
+
+        <!-- FEATURES Horizontal list-->
+        <section class="sec-1">
+            <div class="sub-sec-1">
+                <span class="icon">🌮</span>
+                <h3>Tacos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="sub-sec-1">
+                <span class="icon">🍺</span>
+                <h3>Beer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="sub-sec-1">
+                <span class="icon">🍷</span>
+                <h3>Wine</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="sub-sec-1">
+                <span class="icon">🎵</span>
+                <h3>Music</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+        </section>
+
+        <!--About Featured Taco-->
+        <section class="about-taco">
+            <img class="taco_img" src="./images/queso-taco.png" alt="toco">
+            <div class="info">
+                <h2>Featured Taco</h2>
+                <p>slim profile, easy to hold and loaded with cheese</p>
+                <p>This is the one you have been waiting for</p>
+                <button> Learn More -></button>
+            </div>
+        </section>
+
+        <!--Instant Grams-->
+        <section class="gallary">
+            <h2>
+                Instant Grams
+            </h2>
+            <img src="./images/gallary1.jpeg" alt="gallary1">
+            <img src="./images/gallary2.jpeg" alt="gallary2">
+            <img src="./images/gallary3.jpeg" alt="gallary3">
+            <img src="./images/gallary4.jpeg" alt="gallary4">
+            <img src="./images/gallary5.jpeg" alt="gallary5">
+            <img src="./images/gallary6.jpeg" alt="gallary6">
+            <img src="./images/gallary7.jpeg" alt="gallary7">
+            <img src="./images/gallary8.jpeg" alt="gallart8">
+            <img src="./images/gallary9.jpeg" alt="gallary9">
+            <img src="./images/gallary10.jpeg" alt="gallary10">
+            <img src="./images/gallary11.jpeg" alt="gallart11">
+            <img src="./images/gallary12.jpeg" alt="gallary12">
+            <img src="./images/gallary13.jpeg" alt="gallary13">
+            <img src="./images/gallary14.jpeg" alt="gallart14">
+        </section>
+    </div>
+</body>
+
+</html>
